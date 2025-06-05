@@ -4,13 +4,26 @@ import { Column, Flex, Heading, SmartImage, SmartLink, Tag, Text } from '@/once-
 import styles from './Posts.module.scss';
 import { formatDate } from '@/app/utils/formatDate';
 
-interface PostProps {
-    post: any;
-    thumbnail: boolean;
-    direction?: "row" | "column";
+export interface PostData {
+  slug: string;
+  metadata: {
+    title: string;
+    publishedAt: string;
+    summary?: string;
+    image?: string;
+    tag?: string;
+  };
+  content: string;
 }
 
-export default function Post({ post, thumbnail, direction }: PostProps) {
+interface PostProps {
+    post: PostData;
+    thumbnail: boolean;
+    direction?: "row" | "column";
+    baseURL?: string;
+}
+
+export default function Post({ post, thumbnail, direction, baseURL = '' }: PostProps) {
     return (
         <SmartLink
             fillWidth
@@ -34,7 +47,7 @@ export default function Post({ post, thumbnail, direction }: PostProps) {
                         border="neutral-alpha-weak"
                         cursor="interactive"
                         radius="l"
-                        src={post.metadata.image}
+                        src={`${baseURL}${post.metadata.image}`}
                         alt={'Thumbnail of ' + post.metadata.title}
                         aspectRatio="16 / 9"
                     />

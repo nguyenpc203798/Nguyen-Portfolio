@@ -39,12 +39,15 @@ export function Schema({
   image,
   author,
 }: SchemaProps) {
-  const normalizedBaseURL = baseURL.endsWith("/") ? baseURL.slice(0, -1) : baseURL;
-  const normalizedPath = path.startsWith("/") ? path : `/${path}`;
+  const safePath = path || "";
+  const safeBaseURL = baseURL || "";
+  
+  const normalizedBaseURL = safeBaseURL.endsWith("/") ? safeBaseURL.slice(0, -1) : safeBaseURL;
+  const normalizedPath = safePath.startsWith("/") ? safePath : `/${safePath}`;
 
   const imageUrl = image
     ? `${normalizedBaseURL}${image.startsWith("/") ? image : `/${image}`}`
-    : `${normalizedBaseURL}/og?title=${encodeURIComponent(title)}`;
+    : `${normalizedBaseURL}/og?title=${encodeURIComponent(title || "")}`;
 
   const url = `${normalizedBaseURL}${normalizedPath}`;
 
@@ -56,7 +59,7 @@ export function Schema({
     url,
   };
   
-  schema.sameAs = Object.values(social).filter(Boolean)
+  schema.sameAs = Array.isArray(social) ? social.filter(item => item?.link).map(item => item.link) : [];
 
   if (as === "website") {
     schema.name = title;
@@ -93,7 +96,7 @@ export function Schema({
 
   return (
     <Script
-      id={`schema-${as}-${path}`}
+      id={`schema-${as}-${safePath}`}
       type="application/ld+json"
       dangerouslySetInnerHTML={{
         __html: JSON.stringify(schema),

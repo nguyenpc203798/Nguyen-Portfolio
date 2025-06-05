@@ -36,7 +36,7 @@ export const Footer = () => {
           </Text>
         </Text>
         <Flex gap="16">
-          {social.map(
+          {Array.isArray(social) && social.map(
             (item) =>
               item.link && (
                 <IconButton

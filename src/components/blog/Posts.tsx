@@ -1,49 +1,89 @@
-import { getPosts } from '@/app/utils/utils';
+'use client';
+
+import { useState, useEffect } from 'react';
 import { Grid } from '@/once-ui/components';
 import Post from './Post';
 
+interface PostData {
+  slug: string;
+  metadata: {
+    title: string;
+    publishedAt: string;
+    summary?: string;
+    image?: string;
+    tag?: string;
+  };
+  content: string;
+}
+
 interface PostsProps {
-    range?: [number] | [number, number];
-    columns?: '1' | '2' | '3';
-    thumbnail?: boolean;
-    direction?: 'row' | 'column';
+  range?: [number] | [number, number];
+  columns?: '1' | '2' | '3';
+  thumbnail?: boolean;
+  direction?: 'row' | 'column';
+  baseURL?: string;
 }
 
 export function Posts({
-    range,
-    columns = '1',
-    thumbnail = false,
-    direction
+  range = [1],
+  columns = '1',
+  thumbnail = false,
+  direction,
+  baseURL = ''
 }: PostsProps) {
-    let allBlogs = getPosts(['src', 'app', 'blog', 'posts']);
+  const [posts, setPosts] = useState<PostData[]>([]);
+  const [loading, setLoading] = useState(true);
 
-    const sortedBlogs = allBlogs.sort((a, b) => {
-        return new Date(b.metadata.publishedAt).getTime() - new Date(a.metadata.publishedAt).getTime();
-    });
+  useEffect(() => {
+    async function fetchPosts() {
+      try {
+        const rangeStart = range[0];
+        const rangeEnd = range.length > 1 ? range[1] : undefined;
+        
+        const queryParams = new URLSearchParams();
+        queryParams.append('rangeStart', rangeStart.toString());
+        if (rangeEnd) {
+          queryParams.append('rangeEnd', rangeEnd.toString());
+        }
+        
+        const response = await fetch(`/api/blog-posts?${queryParams.toString()}`);
+        if (!response.ok) {
+          throw new Error('Failed to fetch posts');
+        }
+        
+        const data = await response.json();
+        setPosts(data);
+      } catch (error) {
+        console.error('Error fetching posts:', error);
+      } finally {
+        setLoading(false);
+      }
+    }
 
-    const displayedBlogs = range
-        ? sortedBlogs.slice(
-              range[0] - 1,
-              range.length === 2 ? range[1] : sortedBlogs.length 
-          )
-        : sortedBlogs;
+    fetchPosts();
+  }, [range]);
 
-    return (
-        <>
-            {displayedBlogs.length > 0 && (
-                <Grid
-                    columns={columns} mobileColumns="1"
-                    fillWidth marginBottom="40" gap="12">
-                    {displayedBlogs.map((post) => (
-                        <Post
-                            key={post.slug}
-                            post={post}
-                            thumbnail={thumbnail}
-                            direction={direction}
-                        />
-                    ))}
-                </Grid>
-            )}
-        </>
-    );
+  if (loading) {
+    return <div>Loading posts...</div>;
+  }
+
+  return (
+    <>
+      {posts.length > 0 && (
+        <Grid
+          columns={columns} mobileColumns="1"
+          fillWidth marginBottom="40" gap="12">
+          {posts.map((post) => (
+            <Post
+              key={post.slug}
+              post={post}
+              thumbnail={thumbnail}
+              direction={direction}
+              baseURL={baseURL}
+            />
+          ))}
+        </Grid>
+      )}
+    </>
+  );
 }

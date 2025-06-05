@@ -1,0 +1,237 @@
+{
+  "person": {
+    "firstName": "Phương",
+    "lastName": "Công Nguyên",
+    "role": "Lập trình viên Full Stack",
+    "avatar": "/images/avatar.jpg",
+    "email": "nguyenpc203@gmail.com",
+    "location": "Asia/Jakarta",
+    "languages": ["Tiếng Anh", "Tiếng Việt"]
+  },
+  "newsletter": {
+    "display": true,
+    "title": "Đăng ký nhận bản tin của Phương Công Nguyên",
+    "description": "Tôi thỉnh thoảng tìm hiểu về thiết kế, lập trình và chia sẻ suy nghĩ về sự giao thoa giữa sáng tạo và kỹ thuật."
+  },
+  "social": [
+    {
+      "name": "GitHub",
+      "icon": "github",
+      "link": "https://github.com/once-ui-system/nextjs-starter"
+    },
+    {
+      "name": "LinkedIn",
+      "icon": "linkedin",
+      "link": "https://www.linkedin.com/company/once-ui/"
+    },
+    {
+      "name": "X",
+      "icon": "x",
+      "link": ""
+    },
+    {
+      "name": "Email",
+      "icon": "email",
+      "link": "mailto:example@gmail.com"
+    }
+  ],
+  "home": {
+    "path": "/",
+    "image": "/images/og/home.jpg",
+    "label": "Trang chủ",
+    "title": "Portfolio của Phương Công Nguyên",
+    "description": "Website portfolio giới thiệu công việc của tôi với tư cách là Lập trình viên Full Stack",
+    "headline": "Xây dựng website hiện đại và trực quan",
+    "featured": {
+      "display": true,
+      "title": "Dự án gần đây: Agronexus Capital",
+      "href": "/work/building-once-ui-a-customizable-design-system"
+    },
+    "subline": {
+      "subline1": "Tôi là Phương Công Nguyên, lập trình viên full stack tại",
+      "Logo": "Agronexus Capital",
+      "subline2": ", nơi tôi tạo ra những trải nghiệm người dùng trực quan. Sau giờ làm việc, tôi xây dựng các dự án cá nhân."
+    }
+  },
+  "about": {
+    "path": "/about",
+    "label": "Giới thiệu",
+    "title": "Giới thiệu - Phương Công Nguyên",
+    "description": "Gặp gỡ Phương Công Nguyên, Lập trình viên đến từ Châu Á/Việt Nam",
+    "tableOfContent": {
+      "display": true,
+      "subItems": false
+    },
+    "avatar": {
+      "display": true
+    },
+    "calendar": {
+      "display": true,
+      "link": "https://cal.com"
+    },
+    "intro": {
+      "display": true,
+      "title": "Giới thiệu",
+      "description": "Tôi là một lập trình viên chuyên về mảng web với niềm đam mê chuyển đổi những thách thức phức tạp thành các giải pháp thiết kế đơn giản và thanh lịch. Công việc của tôi bao gồm lập trình frontend, backend, database, và tối ưu hóa hiệu suất của trang web."
+    },
+    "work": {
+      "display": true,
+      "title": "Kinh nghiệm làm việc",
+      "experiences": [
+        {
+          "company": "Agronexus Capital",
+          "timeframe": "03/2025 - Hiện tại",
+          "role": "Lập trình viên Full Stack",
+          "achievements": [
+            "Xây dựng trang web cho công ty chính và các công ty con",
+            "Tối ưu hiệu suất và SEO cho các trang đã xây dựng"
+          ],
+          "images": [
+            {
+              "src": "/images/projects/project-01/cover-01.jpg",
+              "alt": "Dự án Agronexus Capital",
+              "width": 16,
+              "height": 9
+            },
+            {
+              "src": "/images/projects/project-01/cover-01.jpg",
+              "alt": "Dự án Tấn Tài Trading",
+              "width": 16,
+              "height": 9
+            }
+          ]
+        }
+      ]
+    },
+    "studies": {
+      "display": true,
+      "title": "Học vấn",
+      "institutions": [
+        {
+          "name": "Cao đẳng nghề VTC Academy",
+          "description": "Học lập trình web full stack"
+        }
+      ]
+    },
+    "technical": {
+      "display": true,
+      "title": "Kỹ năng chuyên môn",
+      "skills": [
+        {
+          "title": "Html, css, js, react, nextjs",
+          "description": "Có khả năng xây dựng giao diện web với tốc độ cao, tối ưu hóa  SEO và trải nghiệm người dùng (điểm số lighthouse > 90)",
+          "images": [
+            {
+              "src": "/images/projects/project-01/cover-02.jpg",
+              "alt": "Hình ảnh dự án",
+              "width": 16,
+              "height": 9
+            },
+            {
+              "src": "/images/projects/project-01/cover-03.jpg",
+              "alt": "Hình ảnh dự án",
+              "width": 16,
+              "height": 9
+            }
+          ]
+        },
+        {
+          "title": "PHP, Laravel, C#, .NET, Go, Gin",
+          "description": "Có khả năng xây dựng ứng dụng backend với tốc độ cao, tối ưu hóa hiệu suất và bảo mật.",
+          "images": [
+            {
+              "src": "/images/projects/project-01/cover-04.jpg",
+              "alt": "Hình ảnh dự án",
+              "width": 16,
+              "height": 9
+            }
+          ]
+        },
+        {
+          "title": "Redis, MySQL, PostgreSQL, MongoDB",
+          "description": "Khả năng xây dựng cơ sở dữ liệu Chuẩn hóa dữ liệu, tối ưu truy vấn, dự phòng tăng trưởng, phân mảnh, an toàn, bảo mật và kết hợp Cache",
+          "images": [
+            {
+              "src": "/images/projects/project-01/cover-04.jpg",
+              "alt": "Hình ảnh dự án",
+              "width": 16,
+              "height": 9
+            }
+          ]
+        },
+        {
+          "title": "Docker, Kubernetes, CI/CD, Git, Gitlab, Github",
+          "description": "Khả năng tự động hóa quy trình phát triển, tối ưu hóa quy trình phát triển và quản lý dự án",
+          "images": [
+            {
+              "src": "/images/projects/project-01/cover-04.jpg",
+              "alt": "Hình ảnh dự án",
+              "width": 16,
+              "height": 9
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "blog": {
+    "path": "/blog",
+    "label": "Blog",
+    "title": "Viết về lập trình và công nghệ...",
+    "description": "Đọc những gì Phương Công Nguyên đã làm gần đây"
+  },
+  "work": {
+    "path": "/work",
+    "label": "Dự án",
+    "title": "Dự án – Phương Công Nguyên",
+    "description": "Các dự án lập trình và phát triển của Phương Công Nguyên"
+  },
+  "gallery": {
+    "path": "/gallery",
+    "label": "Thư viện ảnh",
+    "title": "Thư viện ảnh – Phương Công Nguyên",
+    "description": "Bộ sưu tập ảnh của Phương Công Nguyên",
+    "images": [
+      {
+        "src": "/images/gallery/horizontal-1.jpg",
+        "alt": "hình ảnh",
+        "orientation": "horizontal"
+      },
+      {
+        "src": "/images/gallery/horizontal-2.jpg",
+        "alt": "hình ảnh",
+        "orientation": "horizontal"
+      },
+      {
+        "src": "/images/gallery/horizontal-3.jpg",
+        "alt": "hình ảnh",
+        "orientation": "horizontal"
+      },
+      {
+        "src": "/images/gallery/horizontal-4.jpg",
+        "alt": "hình ảnh",
+        "orientation": "horizontal"
+      },
+      {
+        "src": "/images/gallery/vertical-1.jpg",
+        "alt": "hình ảnh",
+        "orientation": "vertical"
+      },
+      {
+        "src": "/images/gallery/vertical-2.jpg",
+        "alt": "hình ảnh",
+        "orientation": "vertical"
+      },
+      {
+        "src": "/images/gallery/vertical-3.jpg",
+        "alt": "hình ảnh",
+        "orientation": "vertical"
+      },
+      {
+        "src": "/images/gallery/vertical-4.jpg",
+        "alt": "hình ảnh",
+        "orientation": "vertical"
+      }
+    ]
+  }
+}

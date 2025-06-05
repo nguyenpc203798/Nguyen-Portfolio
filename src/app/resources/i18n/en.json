@@ -1,0 +1,237 @@
+{
+  "person": {
+    "firstName": "Phuong",
+    "lastName": "Cong Nguyen",
+    "role": "Full Stack Developer",
+    "avatar": "/images/avatar.jpg", 
+    "email": "nguyenpc203@gmail.com",
+    "location": "Asia/Jakarta",
+    "languages": ["English", "Vietnamese"]
+  },
+  "newsletter": {
+    "display": true,
+    "title": "Subscribe to Phuong Cong Nguyen's Newsletter",
+    "description": "I occasionally write about design, programming and share thoughts on the intersection of creativity and engineering."
+  },
+  "social": [
+    {
+      "name": "GitHub",
+      "icon": "github",
+      "link": "https://github.com/once-ui-system/nextjs-starter"
+    },
+    {
+      "name": "LinkedIn", 
+      "icon": "linkedin",
+      "link": "https://www.linkedin.com/company/once-ui/"
+    },
+    {
+      "name": "X",
+      "icon": "x",
+      "link": ""
+    },
+    {
+      "name": "Email",
+      "icon": "email",
+      "link": "mailto:example@gmail.com"
+    }
+  ],
+  "home": {
+    "path": "/",
+    "image": "/images/og/home.jpg",
+    "label": "Home",
+    "title": "Phuong Cong Nguyen's Portfolio",
+    "description": "Portfolio website showcasing my work as a Full Stack Developer",
+    "headline": "Building modern and intuitive websites",
+    "featured": {
+      "display": true,
+      "title": "Recent project: Agronexus Capital",
+      "href": "/work/building-once-ui-a-customizable-design-system"
+    },
+    "subline": {
+      "subline1": "I'm Phuong Cong Nguyen, a full stack developer at",
+      "Logo": "Agronexus Capital",
+      "subline2": ", where I create intuitive user experiences. After hours, I build personal projects."
+    }
+  },
+  "about": {
+    "path": "/about",
+    "label": "About",
+    "title": "About - Phuong Cong Nguyen",
+    "description": "Meet Phuong Cong Nguyen, Developer from Asia/Vietnam",
+    "tableOfContent": {
+      "display": true,
+      "subItems": false
+    },
+    "avatar": {
+      "display": true
+    },
+    "calendar": {
+      "display": true,
+      "link": "https://cal.com"
+    },
+    "intro": {
+      "display": true,
+      "title": "Introduction",
+      "description": "I am a web developer with a passion for transforming complex challenges into simple, elegant design solutions. My work includes frontend, backend, database programming, and website performance optimization."
+    },
+    "work": {
+      "display": true,
+      "title": "Work Experience", 
+      "experiences": [
+        {
+          "company": "Agronexus Capital",
+          "timeframe": "03/2025 - Present",
+          "role": "Full Stack Developer",
+          "achievements": [
+            "Built websites for the main company and subsidiaries",
+            "Optimized performance and SEO for built websites"
+          ],
+          "images": [
+            {
+              "src": "/images/projects/project-01/cover-01.jpg",
+              "alt": "Agronexus Capital Project",
+              "width": 16,
+              "height": 9
+            },
+            {
+              "src": "/images/projects/project-01/cover-01.jpg", 
+              "alt": "Tan Tai Trading Project",
+              "width": 16,
+              "height": 9
+            }
+          ]
+        }
+      ]
+    },
+    "studies": {
+      "display": true,
+      "title": "Studies",
+      "institutions": [
+        {
+          "name": "VTC Academy College",
+          "description": "Studied full stack web development"
+        }
+      ]
+    },
+    "technical": {
+      "display": true,
+      "title": "Technical skills",
+      "skills": [
+        {
+          "title": "Html, css, js, react, nextjs",
+          "description": "Able to build web interfaces with high speed, optimize SEO and user experience (lighthouse score > 90)",
+          "images": [
+            {
+              "src": "/images/projects/project-01/cover-02.jpg",
+              "alt": "Project image",
+              "width": 16,
+              "height": 9
+            },
+            {
+              "src": "/images/projects/project-01/cover-03.jpg",
+              "alt": "Project image", 
+              "width": 16,
+              "height": 9
+            }
+          ]
+        },
+        {
+          "title": "PHP, Laravel, C#, .NET, Go, Gin",
+          "description": "Able to build backend applications with high speed, optimize performance and security.",
+          "images": [
+            {
+              "src": "/images/projects/project-01/cover-04.jpg",
+              "alt": "Project image",
+              "width": 16,
+              "height": 9
+            }
+          ]
+        },
+        {
+          "title": "Redis, MySQL, PostgreSQL, MongoDB",
+          "description": "Ability to build databases with data normalization, query optimization, growth planning, sharding, safety, security and cache integration",
+          "images": [
+            {
+              "src": "/images/projects/project-01/cover-04.jpg",
+              "alt": "Project image",
+              "width": 16,
+              "height": 9
+            }
+          ]
+        },
+        {
+          "title": "Docker, Kubernetes, CI/CD, Git, Gitlab, Github",
+          "description": "Ability to automate development processes, optimize development workflow and project management",
+          "images": [
+            {
+              "src": "/images/projects/project-01/cover-04.jpg",
+              "alt": "Project image",
+              "width": 16,
+              "height": 9
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "blog": {
+    "path": "/blog",
+    "label": "Blog",
+    "title": "Writing about programming and technology...",
+    "description": "Read what Phuong Cong Nguyen has been up to recently"
+  },
+  "work": {
+    "path": "/work",
+    "label": "Projects",
+    "title": "Projects – Phuong Cong Nguyen",
+    "description": "Programming and development projects by Phuong Cong Nguyen"
+  },
+  "gallery": {
+    "path": "/gallery",
+    "label": "Gallery",
+    "title": "Photo gallery – Phuong Cong Nguyen",
+    "description": "A photo collection by Phuong Cong Nguyen",
+    "images": [
+      {
+        "src": "/images/gallery/horizontal-1.jpg",
+        "alt": "image",
+        "orientation": "horizontal"
+      },
+      {
+        "src": "/images/gallery/horizontal-2.jpg",
+        "alt": "image",
+        "orientation": "horizontal"
+      },
+      {
+        "src": "/images/gallery/horizontal-3.jpg",
+        "alt": "image",
+        "orientation": "horizontal"
+      },
+      {
+        "src": "/images/gallery/horizontal-4.jpg",
+        "alt": "image",
+        "orientation": "horizontal"
+      },
+      {
+        "src": "/images/gallery/vertical-1.jpg",
+        "alt": "image",
+        "orientation": "vertical"
+      },
+      {
+        "src": "/images/gallery/vertical-2.jpg",
+        "alt": "image",
+        "orientation": "vertical"
+      },
+      {
+        "src": "/images/gallery/vertical-3.jpg",
+        "alt": "image",
+        "orientation": "vertical"
+      },
+      {
+        "src": "/images/gallery/vertical-4.jpg",
+        "alt": "image",
+        "orientation": "vertical"
+      }
+    ]
+  }
+}

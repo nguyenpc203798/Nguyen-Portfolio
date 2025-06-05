@@ -1,33 +1,45 @@
+'use client';
+
 import { Column } from "@/once-ui/components";
 import { baseURL } from "@/app/resources";
 import { about, person, work } from "@/app/resources/content";
-import { Meta, Schema } from "@/once-ui/modules";
+import { Schema } from "@/once-ui/modules";
 import { Projects } from "@/components/work/Projects";
 
-export async function generateMetadata() {
-  return Meta.generate({
-    title: work.title,
-    description: work.description,
-    baseURL: baseURL,
-    image: `${baseURL}/og?title=${encodeURIComponent(work.title)}`,
-    path: work.path,
-  });
-}
+// Default fallback values
+const defaultWork = {
+  title: "Projects",
+  description: "Projects page",
+  path: "/work",
+};
+
+const defaultPerson = {
+  name: "Developer",
+  avatar: "",
+};
+
+const defaultAbout = {
+  path: "/about",
+};
 
 export default function Work() {
+  const safeWork = work || defaultWork;
+  const safePerson = person || defaultPerson;
+  const safeAbout = about || defaultAbout;
+  
   return (
     <Column maxWidth="m">
       <Schema
         as="webPage"
         baseURL={baseURL}
-        path={work.path}
-        title={work.title}
-        description={work.description}
-        image={`${baseURL}/og?title=${encodeURIComponent(work.title)}`}
+        path={safeWork.path}
+        title={safeWork.title}
+        description={safeWork.description}
+        image={`${baseURL}/og?title=${encodeURIComponent(safeWork.title)}`}
         author={{
-          name: person.name,
-          url: `${baseURL}${about.path}`,
-          image: `${baseURL}${person.avatar}`,
+          name: safePerson.name,
+          url: `${baseURL}${safeAbout.path}`,
+          image: `${baseURL}${safePerson.avatar}`,
         }}
       />
       <Projects />

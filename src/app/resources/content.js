@@ -1,268 +1,184 @@
-import { Logo } from "@/once-ui/components";
+"use client";
+
+import { useState, useEffect } from "react";
+import { useLanguage } from "@/app/resources/languageContext";
+import enData from "@/app/resources/i18n/en.json";
+import viData from "@/app/resources/i18n/vi.json";
+
+export const useContent = () => {
+  const { language } = useLanguage();
+  const [content, setContent] = useState(language === "en" ? enData : viData);
+
+  useEffect(() => {
+    setContent(language === "en" ? enData : viData);
+  }, [language]);
+
+  // Bổ sung các hàm getter để tương thích với cấu trúc hiện tại
+  const personWithGetter = {
+    ...content.person,
+    get name() {
+      return `${this.firstName} ${this.lastName}`;
+    },
+  };
+
+  // Chuyển đổi plain text thành JSX cho các trường cần thiết
+  const newsletterWithJSX = {
+    ...content.newsletter,
+    title: <>{content.newsletter.title}</>,
+    description: <>{content.newsletter.description}</>,
+  };
+
+  const homeWithJSX = {
+    ...content.home,
+    headline: <>{content.home.headline}</>,
+    featured: content.home.featured
+      ? {
+          ...content.home.featured,
+          title: (
+            <>
+              {content.home.featured.title.includes("Agronexus Capital") ? (
+                <>
+                  {content.home.featured.title.split("Agronexus Capital")[0]}
+                  <strong className="ml-4">Agronexus Capital</strong>
+                </>
+              ) : (
+                content.home.featured.title
+              )}
+            </>
+          ),
+        }
+      : null,
+    subline: (
+      <>
+        {content.home.subline.subline1}
+        <strong className="ml-4">{content.home.subline.Logo}</strong>
+        {content.home.subline.subline2}
+      </>
+    ),
+  };
+
+  const aboutWithJSX = {
+    ...content.about,
+    intro: {
+      ...content.about.intro,
+      description: <>{content.about.intro.description}</>,
+    },
+    work: {
+      ...content.about.work,
+      experiences: content.about.work.experiences.map((exp) => ({
+        ...exp,
+        achievements: exp.achievements.map((achievement) => <>{achievement}</>),
+      })),
+    },
+    studies: {
+      ...content.about.studies,
+      institutions: content.about.studies.institutions.map((inst) => ({
+        ...inst,
+        description: <>{inst.description}</>,
+      })),
+    },
+    technical: {
+      ...content.about.technical,
+      skills: content.about.technical.skills.map((skill) => ({
+        ...skill,
+        description: <>{skill.description}</>,
+      })),
+    },
+  };
+
+  return {
+    person: personWithGetter,
+    social: content.social,
+    newsletter: newsletterWithJSX,
+    home: homeWithJSX,
+    about: aboutWithJSX,
+    blog: content.blog,
+    work: content.work,
+    gallery: content.gallery,
+  };
+};
+
+// Export a default object for static/non-client components
+import defaultEnData from "@/app/resources/i18n/en.json";
 
 const person = {
-  firstName: "Selene",
-  lastName: "Yu",
+  ...defaultEnData.person,
   get name() {
     return `${this.firstName} ${this.lastName}`;
   },
-  role: "Design Engineer",
-  avatar: "/images/avatar.jpg",
-  email: "example@gmail.com",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
 };
 
+const social = defaultEnData.social;
 const newsletter = {
-  display: true,
-  title: <>Subscribe to {person.firstName}'s Newsletter</>,
-  description: (
-    <>
-      I occasionally write about design, technology, and share thoughts on the intersection of
-      creativity and engineering.
-    </>
-  ),
+  ...defaultEnData.newsletter,
+  title: <>{defaultEnData.newsletter.title}</>,
+  description: <>{defaultEnData.newsletter.description}</>,
 };
-
-const social = [
-  // Links are automatically displayed.
-  // Import new icons in /once-ui/icons.ts
-  {
-    name: "GitHub",
-    icon: "github",
-    link: "https://github.com/once-ui-system/nextjs-starter",
-  },
-  {
-    name: "LinkedIn",
-    icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
-  },
-  {
-    name: "X",
-    icon: "x",
-    link: "",
-  },
-  {
-    name: "Email",
-    icon: "email",
-    link: `mailto:${person.email}`,
-  },
-];
-
 const home = {
-  path: "/",
-  image: "/images/og/home.jpg",
-  label: "Home",
+  ...defaultEnData.home,
   title: `${person.name}'s Portfolio`,
-  description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building bridges between design and code</>,
+  headline: <>{defaultEnData.home.headline}</>,
   featured: {
-    display: true,
-    title: <>Recent project: <strong className="ml-4">Once UI</strong></>,
-    href: "/work/building-once-ui-a-customizable-design-system",
+    ...defaultEnData.home.featured,
+    title: (
+      <>
+        Recent project: <strong className="ml-4">Agronexus Capital</strong>
+      </>
+    ),
   },
   subline: (
     <>
-      I'm Selene, a design engineer at <Logo icon={false} style={{ display: "inline-flex", top: "0.25em", marginLeft: "-0.25em" }}/>, where I craft intuitive
+      I'm Phuong Cong Nguyen, a full stack developer at
+      <strong className="ml-4">Agronexus Capital</strong>
+      , where I craft intuitive
       <br /> user experiences. After hours, I build my own projects.
     </>
   ),
 };
-
 const about = {
-  path: "/about",
-  label: "About",
+  ...defaultEnData.about,
+  label: `About sgsdf`,
   title: `About – ${person.name}`,
   description: `Meet ${person.name}, ${person.role} from ${person.location}`,
-  tableOfContent: {
-    display: true,
-    subItems: false,
-  },
-  avatar: {
-    display: true,
-  },
-  calendar: {
-    display: true,
-    link: "https://cal.com",
-  },
   intro: {
-    display: true,
-    title: "Introduction",
-    description: (
-      <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
-      </>
-    ),
+    ...defaultEnData.about.intro,
+    description: <>{defaultEnData.about.intro.description}</>,
   },
   work: {
-    display: true, // set to false to hide this section
-    title: "Work Experience",
-    experiences: [
-      {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
-        achievements: [
-          <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
-          </>,
-          <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
-          </>,
-        ],
-        images: [
-          // optional: leave the array empty if you don't want to display images
-          {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
-            width: 16,
-            height: 9,
-          },
-        ],
-      },
-      {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
-        achievements: [
-          <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
-          </>,
-          <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
-          </>,
-        ],
-        images: [],
-      },
-    ],
+    ...defaultEnData.about.work,
+    experiences: defaultEnData.about.work.experiences.map((exp) => ({
+      ...exp,
+      achievements: exp.achievements.map((achievement) => <>{achievement}</>),
+    })),
   },
   studies: {
-    display: true, // set to false to hide this section
-    title: "Studies",
-    institutions: [
-      {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
-      },
-      {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
-      },
-    ],
+    ...defaultEnData.about.studies,
+    institutions: defaultEnData.about.studies.institutions.map((inst) => ({
+      ...inst,
+      description: <>{inst.description}</>,
+    })),
   },
   technical: {
-    display: true, // set to false to hide this section
-    title: "Technical skills",
-    skills: [
-      {
-        title: "Figma",
-        description: <>Able to prototype in Figma with Once UI with unnatural speed.</>,
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
-      },
-      {
-        title: "Next.js",
-        description: <>Building next gen apps with Next.js + Once UI + Supabase.</>,
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
-      },
-    ],
+    ...defaultEnData.about.technical,
+    skills: defaultEnData.about.technical.skills.map((skill) => ({
+      ...skill,
+      description: <>{skill.description}</>,
+    })),
   },
 };
-
 const blog = {
-  path: "/blog",
-  label: "Blog",
-  title: "Writing about design and tech...",
+  ...defaultEnData.blog,
   description: `Read what ${person.name} has been up to recently`,
-  // Create new blog posts by adding a new .mdx file to app/blog/posts
-  // All posts will be listed on the /blog route
 };
-
 const work = {
-  path: "/work",
-  label: "Work",
+  ...defaultEnData.work,
   title: `Projects – ${person.name}`,
   description: `Design and dev projects by ${person.name}`,
-  // Create new project pages by adding a new .mdx file to app/blog/posts
-  // All projects will be listed on the /home and /work routes
 };
-
 const gallery = {
-  path: "/gallery",
-  label: "Gallery",
+  ...defaultEnData.gallery,
   title: `Photo gallery – ${person.name}`,
   description: `A photo collection by ${person.name}`,
-  // Images by https://lorant.one
-  // These are placeholder images, replace with your own
-  images: [
-    {
-      src: "/images/gallery/horizontal-1.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/horizontal-2.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/horizontal-3.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/horizontal-4.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/vertical-1.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/vertical-2.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/vertical-3.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/vertical-4.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-  ],
 };
 
 export { person, social, newsletter, home, about, blog, work, gallery };

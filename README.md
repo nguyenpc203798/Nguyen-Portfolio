@@ -92,3 +92,75 @@ See `LICENSE.txt` for more information.
 
 # **Deploy with Vercel**
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fonce-ui-system%2Fmagic-portfolio&project-name=portfolio&repository-name=portfolio&redirect-url=https%3A%2F%2Fgithub.com%2Fonce-ui-system%2Fmagic-portfolio&demo-title=Magic%20Portfolio&demo-description=Showcase%20your%20designers%20or%20developer%20portfolio&demo-url=https%3A%2F%2Fdemo.magic-portfolio.com&demo-image=%2F%2Fraw.githubusercontent.com%2Fonce-ui-system%2Fmagic-portfolio%2Fmain%2Fpublic%2Fimages%2Fog%2Fhome.jpg)
+
+# Magic Portfolio - Hệ thống đa ngôn ngữ
+
+## Tổng quan
+
+Dự án này đã được cập nhật để hỗ trợ đa ngôn ngữ với tiếng Anh và tiếng Việt. Hệ thống sử dụng Context API của React để quản lý trạng thái ngôn ngữ và lưu trữ nội dung trong các file JSON riêng biệt.
+
+## Cấu trúc thư mục
+
+```
+src/
+  app/
+    resources/
+      i18n/
+        languageContext.tsx  # Context API để quản lý ngôn ngữ
+        en.json              # Nội dung tiếng Anh
+        vi.json              # Nội dung tiếng Việt
+      content.js             # File xuất nội dung và hook useContent
+  components/
+    LanguageSwitcher.tsx     # Component để chuyển đổi ngôn ngữ
+```
+
+## Cách sử dụng
+
+### Chuyển đổi ngôn ngữ
+
+Ứng dụng cung cấp một nút chuyển đổi ngôn ngữ trong thanh Header. Khi người dùng nhấp vào nút này, ngôn ngữ sẽ được chuyển đổi giữa tiếng Anh và tiếng Việt. Cài đặt ngôn ngữ được lưu trong localStorage để duy trì lựa chọn của người dùng giữa các phiên.
+
+### Sử dụng nội dung đa ngôn ngữ trong components
+
+Để sử dụng nội dung đa ngôn ngữ trong các component, hãy làm theo các bước sau:
+
+1. Đảm bảo component của bạn là client component bằng cách thêm `'use client';` ở đầu file
+2. Import hook `useContent` từ resources:
+   ```typescript
+   import { useContent } from '@/app/resources';
+   ```
+3. Sử dụng hook để lấy dữ liệu:
+   ```typescript
+   const { home, about, person, newsletter } = useContent();
+   ```
+4. Sử dụng dữ liệu trong component:
+   ```typescript
+   <Heading>{home.headline}</Heading>
+   ```
+
+### Thêm nội dung mới
+
+Để thêm nội dung mới hỗ trợ đa ngôn ngữ:
+
+1. Thêm trường mới vào cả `en.json` và `vi.json`
+2. Cập nhật file `content.js` nếu cần thiết để xử lý các trường mới
+
+## Cách hoạt động
+
+1. `languageContext.tsx` cung cấp một context để lưu trữ và cập nhật ngôn ngữ hiện tại
+2. `LanguageSwitcher.tsx` cho phép người dùng chuyển đổi giữa các ngôn ngữ
+3. `useContent` hook trong `content.js` đọc ngôn ngữ hiện tại và trả về nội dung tương ứng
+4. Các component client sử dụng `useContent` để lấy nội dung đúng ngôn ngữ
+5. Các component server hoặc các file không thể truy cập context sẽ sử dụng giá trị mặc định từ tiếng Anh
+
+## Mở rộng
+
+Để thêm ngôn ngữ mới:
+
+1. Tạo file JSON mới cho ngôn ngữ đó (ví dụ: `fr.json` cho tiếng Pháp)
+2. Cập nhật type trong `languageContext.tsx`:
+   ```typescript
+   type Language = 'en' | 'vi' | 'fr';
+   ```
+3. Cập nhật `content.js` để hỗ trợ ngôn ngữ mới
+4. Cập nhật `LanguageSwitcher.tsx` để hiển thị tùy chọn mới

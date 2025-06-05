@@ -1,24 +1,18 @@
+'use client';
+
 import React from "react";
 
 import { Heading, Flex, Text, Button, Avatar, RevealFx, Column, Badge, Row } from "@/once-ui/components";
 import { Projects } from "@/components/work/Projects";
 
-import { baseURL, routes } from "@/app/resources";
-import { home, about, person, newsletter } from "@/app/resources/content";
+import { baseURL, routes, useContent } from "@/app/resources";
 import { Mailchimp } from "@/components";
 import { Posts } from "@/components/blog/Posts";
-import { Meta, Schema } from "@/once-ui/modules";
-
-export async function generateMetadata() {
-  return Meta.generate({
-    title: home.title,
-    description: home.description,
-    baseURL: baseURL,
-    path: home.path,
-  });
-}
+import { Schema } from "@/once-ui/modules";
 
 export default function Home() {
+  const { home, about, person, newsletter } = useContent();
+  
   return (
     <Column maxWidth="m" gap="xl" horizontal="center">
       <Schema
@@ -78,7 +72,7 @@ export default function Home() {
         </Column>
       </Column>
       <RevealFx translateY="16" delay={0.6}>
-        <Projects range={[1, 1]} />
+        <Projects range={[1, 1]} baseURL={baseURL} />
       </RevealFx>
       {routes["/blog"] && (
         <Flex fillWidth gap="24" mobileDirection="column">
@@ -88,11 +82,11 @@ export default function Home() {
             </Heading>
           </Flex>
           <Flex flex={3} paddingX="20">
-            <Posts range={[1, 2]} columns="2" />
+            <Posts range={[1, 2]} columns="2" baseURL={baseURL} />
           </Flex>
         </Flex>
       )}
-      <Projects range={[2]} />
+      <Projects range={[2]} baseURL={baseURL} />
       {newsletter.display && <Mailchimp newsletter={newsletter} />}
     </Column>
   );
