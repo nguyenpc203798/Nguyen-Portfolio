@@ -5,7 +5,7 @@ const routes = {
   "/": true,
   "/about": true,
   "/work": true,
-  "/blog": true,
+  "/blog": false,
   "/gallery": true,
 };
 
@@ -15,10 +15,10 @@ const protectedRoutes = {
   "/work/automate-design-handovers-with-a-figma-to-code-pipeline": true,
 };
 
-import { Geist } from "next/font/google";
 import { Geist_Mono } from "next/font/google";
+import { Roboto } from "next/font/google";
 
-const primaryFont = Geist({
+const primaryFont = Roboto({
   variable: "--font-primary",
   subsets: ["latin"],
   display: "swap",
@@ -42,10 +42,10 @@ const style = {
   neutral: "slate", // sand | gray | slate
   brand: "moss", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan
   accent: "green", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan
-  solid: "color", // color | contrast
+  solid: "contrast", // color | contrast
   solidStyle: "plastic", // flat | plastic
-  border: "playful", // rounded | playful | conservative
-  surface: "translucent", // filled | translucent
+  border: "rounded", // rounded | playful | conservative
+  surface: "filled", // filled | translucent
   transition: "all", // all | micro | macro
   scaling: "100" // 90 | 95 | 100 | 105 | 110
 };
@@ -92,8 +92,8 @@ const effects = {
 };
 
 const display = {
-  location: true,
-  time: true,
+  location: false,
+  time: false,
   themeSwitcher: true
 };
 

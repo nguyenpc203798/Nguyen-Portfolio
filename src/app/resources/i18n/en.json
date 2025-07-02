@@ -5,7 +5,7 @@
     "role": "Full Stack Developer",
     "avatar": "/images/avatar.jpg", 
     "email": "nguyenpc203@gmail.com",
-    "location": "Asia/Jakarta",
+    "location": "Asia/Vietnam",
     "languages": ["English", "Vietnamese"]
   },
   "newsletter": {
@@ -37,7 +37,7 @@
   ],
   "home": {
     "path": "/",
-    "image": "/images/og/home.jpg",
+    "image": "/images/avatar.jpg",
     "label": "Home",
     "title": "Phuong Cong Nguyen's Portfolio",
     "description": "Portfolio website showcasing my work as a Full Stack Developer",
@@ -48,9 +48,9 @@
       "href": "/work/building-once-ui-a-customizable-design-system"
     },
     "subline": {
-      "subline1": "I'm Phuong Cong Nguyen, a full stack developer at",
+      "subline1": "I'm Phuong Cong Nguyen, a full stack developer",
       "Logo": "Agronexus Capital",
-      "subline2": ", where I create intuitive user experiences. After hours, I build personal projects."
+      "subline2": ", I love building modern, high-performance web applications. After work, I explore and build personal projects."
     }
   },
   "about": {

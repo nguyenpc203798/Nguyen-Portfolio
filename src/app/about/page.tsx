@@ -136,7 +136,7 @@ export default function About() {
             fillWidth
             minHeight="160"
             vertical="center"
-            marginBottom="32"
+            marginBottom="24"
           >
             {safeAbout.calendar.display && (
               <Flex
@@ -171,6 +171,7 @@ export default function About() {
               {safePerson.name}
             </Heading>
             <Text
+              marginTop="16"
               className={styles.textAlign}
               variant="display-default-xs"
               onBackground="neutral-weak"
@@ -221,7 +222,7 @@ export default function About() {
               textVariant="body-default-l"
               fillWidth
               gap="m"
-              marginBottom="xl"
+              marginBottom="24"
             >
               {safeAbout.intro.description}
             </Column>

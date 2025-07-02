@@ -51,7 +51,6 @@ export const useContent = () => {
     subline: (
       <>
         {content.home.subline.subline1}
-        <strong className="ml-4">{content.home.subline.Logo}</strong>
         {content.home.subline.subline2}
       </>
     ),
@@ -129,7 +128,6 @@ const home = {
   subline: (
     <>
       I'm Phuong Cong Nguyen, a full stack developer at
-      <strong className="ml-4">Agronexus Capital</strong>
       , where I craft intuitive
       <br /> user experiences. After hours, I build my own projects.
     </>

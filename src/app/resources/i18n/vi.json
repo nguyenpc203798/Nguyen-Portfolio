@@ -5,7 +5,7 @@
     "role": "Lập trình viên Full Stack",
     "avatar": "/images/avatar.jpg",
     "email": "nguyenpc203@gmail.com",
-    "location": "Asia/Jakarta",
+    "location": "Asia/Vietnam",
     "languages": ["Tiếng Anh", "Tiếng Việt"]
   },
   "newsletter": {
@@ -37,7 +37,7 @@
   ],
   "home": {
     "path": "/",
-    "image": "/images/og/home.jpg",
+    "image": "/images/avatar.jpg",
     "label": "Trang chủ",
     "title": "Portfolio của Phương Công Nguyên",
     "description": "Website portfolio giới thiệu công việc của tôi với tư cách là Lập trình viên Full Stack",
@@ -48,9 +48,9 @@
       "href": "/work/building-once-ui-a-customizable-design-system"
     },
     "subline": {
-      "subline1": "Tôi là Phương Công Nguyên, lập trình viên full stack tại",
+      "subline1": "Tôi là Phương Công Nguyên, lập trình viên full stack",
       "Logo": "Agronexus Capital",
-      "subline2": ", nơi tôi tạo ra những trải nghiệm người dùng trực quan. Sau giờ làm việc, tôi xây dựng các dự án cá nhân."
+      "subline2": ", tôi rất thích xây dựng các ứng dụng web có giao diện hiện đại và hiệu suất cao. Sau giờ làm việc, tôi tìm tòi xây dụng các dự án cá nhân."
     }
   },
   "about": {
