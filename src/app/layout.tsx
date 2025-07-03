@@ -11,10 +11,10 @@ import { opacity, SpacingToken } from "@/once-ui/types";
 import { Meta } from "@/once-ui/modules";
 import { LanguageProvider } from "@/app/resources/languageContext";
 
-export async function generateMetadata() {
+export async function generateMetadata() {  
   return Meta.generate({
-    title: home.title,
-    description: home.description,
+    title: "Nguyên Portfolio",
+    description: "Welcome to my portfolio website showcasing my work and projects.",
     baseURL: baseURL,
     path: home.path,
     image: home.image,

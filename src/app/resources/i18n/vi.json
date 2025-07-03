@@ -108,7 +108,7 @@
       "title": "Học vấn",
       "institutions": [
         {
-          "name": "Cao đẳng nghề VTC Academy",
+          "name": "VTC Academy",
           "description": "Học lập trình web full stack"
         }
       ]
@@ -160,7 +160,7 @@
           ]
         },
         {
-          "title": "Docker, Kubernetes, CI/CD, Git, Gitlab, Github",
+          "title": "Docker, Jenkins, CircleCI, Kubernetes, CI/CD, Git, Gitlab, Github, Prometheus, Grafana",
           "description": "Khả năng tự động hóa quy trình phát triển, tối ưu hóa quy trình phát triển và quản lý dự án",
           "images": [
             {
