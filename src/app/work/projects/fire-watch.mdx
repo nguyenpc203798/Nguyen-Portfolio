@@ -1,0 +1,75 @@
+---
+title: "Xây dựng website xem phim trực tuyến Fire Watch"
+publishedAt: "2024-04-01"
+summary: "Phát triển nền tảng xem phim trực tuyến đa tính năng với hệ thống thành viên, thanh toán trực tuyến và hệ thống quản lý nội dung toàn diện."
+images:
+  - "/images/projects/firewatch/banner.png"
+video:
+  - "https://nguyenpc203-portfolio.s3.ap-southeast-1.amazonaws.com/videos/firewatch.mp4"
+aspectRatio: "16 / 9"
+team:
+  - name: "Phương Nguyên"
+    role: "Kỹ sư phần mềm"
+    avatar: "/images/avatar.jpg"
+    linkedIn: "https://www.linkedin.com/in/nguyen-phuong-4132b7357/"
+link: "https://nguyenmephim.xyz"
+---
+
+## Tổng quan
+
+Fire Watch là nền tảng xem phim trực tuyến cao cấp với nhiều tính năng hiện đại nhắm đến người dùng Việt Nam. Dự án được phát triển nhằm cung cấp trải nghiệm xem phim chất lượng cao với nhiều lựa chọn nội dung phong phú. Hệ thống bao gồm hai phân hệ chính: trang người dùng với giao diện thân thiện và hệ thống quản trị toàn diện cho admin. Nền tảng này được xây dựng với kiến trúc vi dịch vụ, có khả năng mở rộng cao và tối ưu hiệu suất.
+
+## Tính năng cho người dùng
+
+- **Hệ thống tài khoản**: Đăng ký tài khoản với xác thực OTP qua email, đăng nhập với tài khoản Google hoặc tài khoản hệ thống.
+- **Gói thành viên Premium**: Người dùng có thể đăng ký gói VIP (hạng Bạc, hạng Vàng) với các đặc quyền khác nhau như xem phim ở chất lượng cao, không hiển thị quảng cáo.
+- **Thanh toán trực tuyến**: Tích hợp cổng thanh toán MoMo để thanh toán gói thành viên và hỗ trợ áp dụng mã giảm giá.
+- **Thư viện phim phong phú**: Hiển thị danh sách phim với bộ lọc đa chiều (theo danh mục, thể loại, quốc gia) và tính năng tìm kiếm thông minh.
+- **Tương tác người dùng**: Hệ thống đánh giá phim bằng sao, bình luận với tính năng trả lời, sắp xếp theo lượt thích, hiển thị top comment.
+- **Trình phát phim tiên tiến**: Người dùng có thể xem phim với nhiều lựa chọn chất lượng (phụ thuộc gói thành viên), điều chỉnh tốc độ phát, âm lượng và chọn tập phim trong series.
+- **Quản lý tài khoản cá nhân**: Người dùng có thể cập nhật thông tin cá nhân, avatar, đổi mật khẩu (có xác thực OTP qua email).
+
+## Tính năng quản trị viên
+
+- **Quản lý nội dung**: Thêm, sửa, xóa phim, tập phim, server phát, danh mục, thể loại, quốc gia với giao diện quản trị thân thiện.
+- **Quản lý thành viên**: Cấu hình các gói premium, tạo mã giảm giá, quản lý quảng cáo xuất hiện trong phim.
+- **Quản lý người dùng**: Block/unblock tài khoản người dùng, kiểm duyệt bình luận (block/unblock comment).
+- **Báo cáo và thống kê**: Theo dõi lưu lượng truy cập, doanh số theo thời gian thực, thống kê lượt xem phim và tập phim.
+- **Quản lý tài khoản admin**: Cập nhật thông tin cá nhân, đổi mật khẩu, cập nhật avatar và các thông tin khác.
+
+## Công nghệ sử dụng
+
+- **Backend**: 
+  - Gin (Go) làm web framework chính với HTML template
+  - MongoDB làm cơ sở dữ liệu chính
+  - Redis cho caching
+  - Elasticsearch cho tìm kiếm nâng cao
+  - JWT cho xác thực và phân quyền
+
+- **Frontend**: 
+  - HTML, CSS, JavaScript
+  - Bootstrap cho UI responsive
+  - jQuery và AJAX cho tương tác động
+  - Plyr.js cho trình phát video
+  - Parallax cho hiệu ứng giao diện
+
+- **DevOps & Infrastructure**: 
+  - AWS (EC2 cho hosting, S3 cho lưu trữ)
+  - Docker cho containerization
+  - Jenkins cho CI/CD
+  - Prometheus cho giám sát hệ thống
+  - Unit testing cho kiểm thử tự động
+
+## Thách thức và Bài học
+
+Một trong những thách thức lớn nhất là xây dựng hệ thống xử lý video với nhiều chất lượng khác nhau, đảm bảo trải nghiệm xem mượt mà trên nhiều thiết bị và điều kiện mạng khác nhau. Việc tích hợp các cổng thanh toán và đảm bảo an toàn cho giao dịch người dùng cũng đòi hỏi kiến trúc bảo mật nghiêm ngặt.
+
+Thử thách kỹ thuật quan trọng khác là tối ưu hóa hiệu suất khi hệ thống phục vụ đồng thời nhiều người dùng xem video. Giải pháp bao gồm việc triển khai Redis caching, CDN cho nội dung video, và phân tán tải thông qua kiến trúc microservices.
+
+Bài học quan trọng rút ra là tầm quan trọng của việc thiết kế cơ sở dữ liệu phù hợp ngay từ đầu, đặc biệt là với MongoDB - yêu cầu một cách tiếp cận khác so với CSDL quan hệ truyền thống. Việc lựa chọn Elasticsearch cho tìm kiếm đã cải thiện đáng kể trải nghiệm người dùng, cho phép tìm kiếm nhanh chóng qua khối lượng nội dung lớn.
+
+## Kết quả
+
+Fire Watch đã đạt điểm số cao trong buổi trình bày đồ án cuối kỳ (8.16/10) và nhận được phản hồi tích cực về giao diện cũng như tính năng. Dự án vẫn đang tiếp tục được phát triển, tối ưu hiệu suất và bổ sung thêm các tính năng mới để nâng cao trải nghiệm người dùng.
+
+Dự án này đã chứng minh khả năng xây dựng nền tảng streaming phức tạp với hiệu suất cao, khả năng mở rộng và trải nghiệm người dùng được tối ưu hóa.

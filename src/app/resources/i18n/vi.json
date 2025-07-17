@@ -1,0 +1,421 @@
+{
+  "person": {
+    "firstName": "Phương",
+    "lastName": "Công Nguyên",
+    "role": "Lập trình viên Full Stack",
+    "avatar": "/images/avatar.jpg",
+    "email": "nguyenpc203@gmail.com",
+    "location": "Asia/Vietnam",
+    "languages": ["Tiếng Anh", "Tiếng Việt"]
+  },
+  "newsletter": {
+    "display": true,
+    "title": "Đăng ký nhận bản tin của Tôi",
+    "description": "Tôi thỉnh thoảng tìm hiểu về thiết kế, lập trình và chia sẻ suy nghĩ về sự giao thoa giữa sáng tạo và kỹ thuật."
+  },
+  "social": [
+    {
+      "name": "GitHub",
+      "icon": "github",
+      "link": "https://github.com/once-ui-system/nextjs-starter"
+    },
+    {
+      "name": "LinkedIn",
+      "icon": "linkedin",
+      "link": "https://www.linkedin.com/company/once-ui/"
+    },
+    {
+      "name": "X",
+      "icon": "x",
+      "link": ""
+    },
+    {
+      "name": "Email",
+      "icon": "email",
+      "link": "mailto:example@gmail.com"
+    }
+  ],
+  "home": {
+    "path": "/",
+    "image": "/images/avatar.jpg",
+    "label": "Trang chủ",
+    "title": "Portfolio của Phương Công Nguyên",
+    "description": "Website portfolio giới thiệu công việc của tôi với tư cách là Lập trình viên Full Stack",
+    "headline": "Xây dựng website hiện đại và trực quan",
+    "featured": {
+      "display": true,
+      "title": "Dự án gần đây: Agronexus Capital",
+      "href": "/work/building-once-ui-a-customizable-design-system"
+    },
+    "subline": {
+      "subline1": "Tôi là Phương Công Nguyên, lập trình viên full stack",
+      "Logo": "Agronexus Capital",
+      "subline2": ", tôi rất thích xây dựng các ứng dụng web có giao diện hiện đại và hiệu suất cao. Sau giờ làm việc, tôi tìm tòi xây dựng các dự án cá nhân."
+    }
+  },
+  "about": {
+    "path": "/about",
+    "label": "Giới thiệu",
+    "title": "Giới thiệu - Phương Công Nguyên",
+    "description": "Gặp gỡ Phương Công Nguyên, Lập trình viên đến từ Châu Á/Việt Nam",
+    "tableOfContent": {
+      "display": true,
+      "subItems": false
+    },
+    "avatar": {
+      "display": true
+    },
+    "calendar": {
+      "display": true,
+      "link": "https://cal.com"
+    },
+    "intro": {
+      "display": true,
+      "title": "Giới thiệu",
+      "description": "Tôi là một lập trình viên chuyên về mảng web với niềm đam mê chuyển đổi những thách thức phức tạp thành các giải pháp thiết kế đơn giản và thanh lịch. Công việc của tôi bao gồm lập trình frontend, backend, database, devops và tối ưu hóa hiệu suất của trang web."
+    },
+    "work": {
+      "display": true,
+      "title": "Kinh nghiệm làm việc",
+      "experiences": [
+        {
+          "company": "Agronexus Capital",
+          "timeframe": "03/2025 - Hiện tại",
+          "role": "Lập trình viên Full Stack",
+          "achievements": [
+            "Xây dựng trang web cho công ty chính và các công ty con (bao gồm tất cả quy trình)",
+            "Tối ưu hiệu suất và SEO cho các trang đã xây dựng",
+            "Xây dựng lading page cho các dự án sắp tới",
+            "Đề xuất hướng xây dựng web site cho các công ty đối tác chưa có trang web",
+            "Tạm thời quản trị server mail mắt bão và cài đặt mail cho nhân viên khi thiếu vị trí admin",
+            "Đang nghiên cứu xây dựng các tool tự động hóa các công việc trong công ty bằng n8n"
+          ],
+          "images": [
+            {
+              "src": "/images/work/agro/logo.png",
+              "alt": "Agronexus Capital Logo",
+              "width": 16,
+              "height": 9
+            },  
+            {
+              "src": "/images/work/tantai/logo.png", 
+              "alt": "Tan Tai Trading Logo",
+              "width": 16,
+              "height": 9
+            }
+          ]
+        }
+      ]
+    },
+    "studies": {
+      "display": true,
+      "title": "Học vấn",
+      "institutions": [
+        {
+          "name": "VTC Academy",
+          "description": "Học lập trình web full stack"
+        }
+      ]
+    },
+    "technical": {
+      "display": true,
+      "title": "Kỹ năng chuyên môn",
+      "skills": [
+        {
+          "title": "Html, css, js, typescript, tailwindcss, bootstrap, jquery, react, nextjs, shadcn/ui, radix-ui, figma, canva, photoshop, illustrator",
+          "description": "Tôi luôn chú trọng đến Clean code, dễ mở rộng và bảo trì, Hiệu suất cao và tốc độ tải trang tối ưu, Trải nghiệm người dùng (UX) mượt mà và thân thiện, Reponsive trên mọi thiết bị, Chuẩn SEO, giúp sản phẩm dễ tiếp cận hơn với khách hàng và công cụ tìm kiếm.",
+          "images": [
+            {
+              "src": "/images/Tech/html.png",
+              "alt": "Hình ảnh kỹ năng",
+              "width": 5,
+              "height": 5
+            },
+            {
+              "src": "/images/Tech/css.png",
+              "alt": "Hình ảnh kỹ năng",
+              "width": 5,
+              "height": 5
+            },
+            {
+              "src": "/images/Tech/js.png",
+              "alt": "Hình ảnh kỹ năng",
+              "width": 5,
+              "height": 5
+            },
+            {
+              "src": "/images/Tech/ts.png",
+              "alt": "Hình ảnh kỹ năng",
+              "width": 5,
+              "height": 5
+            },
+            {
+              "src": "/images/Tech/tailwind.png",
+              "alt": "Hình ảnh kỹ năng",
+              "width": 5,
+              "height": 5
+            },
+            {
+              "src": "/images/Tech/bootstrap.png",
+              "alt": "Hình ảnh kỹ năng",
+              "width": 5,
+              "height": 5
+            },
+            {
+              "src": "/images/Tech/jquery.png",
+              "alt": "Hình ảnh kỹ năng",
+              "width": 5,
+              "height": 5
+            },
+            {
+              "src": "/images/Tech/react.png",
+              "alt": "Hình ảnh kỹ năng",
+              "width": 5,
+              "height": 5
+            },
+            {
+              "src": "/images/Tech/nextjs.png",
+              "alt": "Hình ảnh kỹ năng",
+              "width": 5,
+              "height": 5
+            },
+            {
+              "src": "/images/Tech/shadcn.png",
+              "alt": "Hình ảnh kỹ năng",
+              "width": 5,
+              "height": 5
+            },
+            {
+              "src": "/images/Tech/radix.png",
+              "alt": "Hình ảnh kỹ năng",
+              "width": 5,
+              "height": 5
+            },
+            {
+              "src": "/images/Tech/figma.png",
+              "alt": "Hình ảnh kỹ năng",
+              "width": 5,
+              "height": 5
+            },
+            {
+              "src": "/images/Tech/canva.png",
+              "alt": "Hình ảnh kỹ năng",
+              "width": 5,
+              "height": 5
+            },
+            {
+              "src": "/images/Tech/photoshop.png",
+              "alt": "Hình ảnh kỹ năng",
+              "width": 5,
+              "height": 5
+            },
+            {
+              "src": "/images/Tech/illustrator.png",
+              "alt": "Hình ảnh kỹ năng",
+              "width": 5,
+              "height": 5
+            }
+          ]
+        },
+        {
+          "title": "PHP, Laravel, C#, .NET, Go, Gin, Nodejs, Express",
+          "description": "Tôi luôn chú trọng đến hiệu suất, bảo mật và khả năng mở rộng trong mỗi hệ thống mà tôi xây dựng. Với khả năng thiết kế và phát triển các API hiệu năng cao, bảo trì dễ dàng và đáp ứng tốt nhu cầu của cả sản phẩm và người dùng cuối. Trong quá trình phát triển, tôi áp dụng các nguyên tắc SOLID, kiến trúc Clean Architecture và Design Pattern như Repository, Factory, CQRS để đảm bảo chất lượng mã nguồn. Tôi cũng có kinh nghiệm thiết kế RESTful API, GraphQL, xử lý authentication/authorization (JWT, OAuth2) và triển khai middleware, background job, queue, phục vụ cho các nhu cầu nghiệp vụ phức tạp.",
+          "images": [
+              {
+                "src": "/images/Tech/php.png",
+                "alt": "Hình ảnh kỹ năng",
+                "width": 5,
+                "height": 5
+              },
+              {
+                "src": "/images/Tech/laravel.png",
+                "alt": "Hình ảnh kỹ năng",
+                "width": 5,
+                "height": 5
+              },
+              {
+                "src": "/images/Tech/csharp.png",
+                "alt": "Hình ảnh kỹ năng",
+                "width": 5,
+                "height": 5
+              },
+              {
+                "src": "/images/Tech/dotnet.png",
+                "alt": "Hình ảnh kỹ năng",
+                "width": 5,
+                "height": 5
+              },
+              {
+                "src": "/images/Tech/go.png",
+                "alt": "Hình ảnh kỹ năng",
+                "width": 5,
+                "height": 5
+              },
+              {
+                "src": "/images/Tech/nodejs.png",
+                "alt": "Hình ảnh kỹ năng",
+                "width": 5,
+                "height": 5
+              },
+              {
+                "src": "/images/Tech/express.png",
+                "alt": "Hình ảnh kỹ năng",
+                "width": 5,
+                "height": 5
+              }
+          ]
+        },
+        {
+          "title": "Redis, Elasticsearch, MySQL, PostgreSQL, MongoDB, Firebase, AWS",
+          "description": "Khả năng thiết kế và xây dựng hệ thống cơ sở dữ liệu hiệu quả, bao gồm chuẩn hóa dữ liệu, tối ưu truy vấn, lập chỉ mục (indexing), dự phòng tăng trưởng, phân mảnh (sharding), replication, backup và bảo mật. Thành thạo quản lý dữ liệu với cả cơ sở dữ liệu quan hệ (MySQL, PostgreSQL) và NoSQL (MongoDB, Firebase). Kết hợp cache hiệu quả với Redis để tăng tốc độ phản hồi. Có kinh nghiệm sử dụng Elasticsearch cho tìm kiếm toàn văn (full-text search) và xử lý dữ liệu lớn. Làm việc tốt với hệ thống realtime (Firebase, Redis pub/sub), có khả năng triển khai cơ sở hạ tầng trên AWS (RDS, S3, EC2, CloudWatch) với khả năng mở rộng, giám sát và tối ưu chi phí.",
+          "images": [
+            {
+              "src": "/images/Tech/redis.png",
+              "alt": "Hình ảnh kỹ năng",
+              "width": 5,
+              "height": 5
+            },
+            {
+              "src": "/images/Tech/elasticsearch.png",
+              "alt": "Hình ảnh kỹ năng",
+              "width": 5,
+              "height": 5
+            },
+            {
+              "src": "/images/Tech/mysql.png",
+              "alt": "Hình ảnh kỹ năng",
+              "width": 5,
+              "height": 5
+            },
+            {
+              "src": "/images/Tech/postgresql.png",
+              "alt": "Hình ảnh kỹ năng",
+              "width": 5,
+              "height": 5
+            },
+            {
+              "src": "/images/Tech/mongodb.png",
+              "alt": "Hình ảnh kỹ năng",
+              "width": 5,
+              "height": 5
+            },
+            {
+              "src": "/images/Tech/firebase.png",
+              "alt": "Hình ảnh kỹ năng",
+              "width": 5,
+              "height": 5
+            },
+            {
+              "src": "/images/Tech/aws.png",
+              "alt": "Hình ảnh kỹ năng",
+              "width": 5,
+              "height": 5
+            }
+          ]
+        },
+        {
+          "title": "Docker, Jenkins, CircleCI, N8n, Git, Github, Google OAuth, Zalo OAuth, Telegram Bot API, Momo Payment",
+          "description": "Khả năng tự động hóa và tối ưu hóa quy trình phát triển phần mềm thông qua việc sử dụng các công cụ DevOps. Thành thạo sử dụng Docker để đóng gói ứng dụng, triển khai nhanh chóng và nhất quán qua nhiều môi trường. Kinh nghiệm xây dựng pipeline CI/CD bằng Jenkins và CircleCI để tự động hóa kiểm thử, build, và triển khai. Sử dụng N8n để tích hợp và tự động hóa workflow giữa các hệ thống (Google Sheet, Email, API, v.v). Thành thạo Git và GitHub trong quản lý mã nguồn, thực hiện branching strategy (Git Flow), code review, và phối hợp làm việc nhóm hiệu quả.",
+          "images": [
+            {
+              "src": "/images/Tech/docker.png",
+              "alt": "Hình ảnh kỹ năng",
+              "width": 5,
+              "height": 5
+            },
+            {
+              "src": "/images/Tech/jenkins.png",
+              "alt": "Hình ảnh kỹ năng",
+              "width": 5,
+              "height": 5
+            },
+            {
+              "src": "/images/Tech/circleci.png",
+              "alt": "Hình ảnh kỹ năng",
+              "width": 5,
+              "height": 5
+            },
+            {
+              "src": "/images/Tech/n8n.png",
+              "alt": "Hình ảnh kỹ năng",
+              "width": 5,
+              "height": 5
+            },
+            {
+              "src": "/images/Tech/git.png",
+              "alt": "Hình ảnh kỹ năng",
+              "width": 5,
+              "height": 5
+            },
+            {
+              "src": "/images/Tech/github.png",
+              "alt": "Hình ảnh kỹ năng",
+              "width": 5,
+              "height": 5
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "blog": {
+    "path": "/blog",
+    "label": "Blog",
+    "title": "Viết về lập trình và công nghệ...",
+    "description": "Đọc những gì Phương Công Nguyên đã làm gần đây"
+  },
+  "work": {
+    "path": "/work",
+    "label": "Dự án",
+    "title": "Dự án – Phương Công Nguyên",
+    "description": "Các dự án lập trình và phát triển của Phương Công Nguyên"
+  },
+  "gallery": {
+    "path": "/gallery",
+    "label": "Thư viện ảnh",
+    "title": "Thư viện ảnh – Phương Công Nguyên",
+    "description": "Bộ sưu tập ảnh của Phương Công Nguyên",
+    "images": [
+      {
+        "src": "/images/gallery/horizontal-1.jpg",
+        "alt": "hình ảnh",
+        "orientation": "horizontal"
+      },
+      {
+        "src": "/images/gallery/horizontal-2.jpg",
+        "alt": "hình ảnh",
+        "orientation": "horizontal"
+      },
+      {
+        "src": "/images/gallery/horizontal-3.jpg",
+        "alt": "hình ảnh",
+        "orientation": "horizontal"
+      },
+      {
+        "src": "/images/gallery/horizontal-4.jpg",
+        "alt": "hình ảnh",
+        "orientation": "horizontal"
+      },
+      {
+        "src": "/images/gallery/vertical-1.jpg",
+        "alt": "hình ảnh",
+        "orientation": "vertical"
+      },
+      {
+        "src": "/images/gallery/vertical-2.jpg",
+        "alt": "hình ảnh",
+        "orientation": "vertical"
+      },
+      {
+        "src": "/images/gallery/vertical-3.jpg",
+        "alt": "hình ảnh",
+        "orientation": "vertical"
+      },
+      {
+        "src": "/images/gallery/vertical-4.jpg",
+        "alt": "hình ảnh",
+        "orientation": "vertical"
+      }
+    ]
+  }
+}

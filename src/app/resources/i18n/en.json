@@ -1,0 +1,421 @@
+{
+  "person": {
+    "firstName": "Phuong",
+    "lastName": "Cong Nguyen",
+    "role": "Full Stack Developer",
+    "avatar": "/images/avatar.jpg", 
+    "email": "nguyenpc203@gmail.com",
+    "location": "Asia/Vietnam",
+    "languages": ["English", "Vietnamese"]
+  },
+  "newsletter": {
+    "display": true,
+    "title": "Subscribe to My Newsletter",
+    "description": "I occasionally write about design, programming and share thoughts on the intersection of creativity and engineering."
+  },
+  "social": [
+    {
+      "name": "GitHub",
+      "icon": "github",
+      "link": "https://github.com/once-ui-system/nextjs-starter"
+    },
+    {
+      "name": "LinkedIn", 
+      "icon": "linkedin",
+      "link": "https://www.linkedin.com/company/once-ui/"
+    },
+    {
+      "name": "X",
+      "icon": "x",
+      "link": ""
+    },
+    {
+      "name": "Email",
+      "icon": "email",
+      "link": "mailto:example@gmail.com"
+    }
+  ],
+  "home": {
+    "path": "/",
+    "image": "/images/avatar.jpg",
+    "label": "Home",
+    "title": "Phuong Cong Nguyen's Portfolio",
+    "description": "Portfolio website showcasing my work as a Full Stack Developer",
+    "headline": "Building modern and intuitive websites",
+    "featured": {
+      "display": true,
+      "title": "Recent project: Agronexus Capital",
+      "href": "/work/building-once-ui-a-customizable-design-system"
+    },
+    "subline": {
+      "subline1": "I'm Phuong Cong Nguyen, a full stack developer",
+      "Logo": "Agronexus Capital",
+      "subline2": ", I love building modern, high-performance web applications. After work, I explore and build personal projects."
+    }
+  },
+  "about": {
+    "path": "/about",
+    "label": "About",
+    "title": "About - Phuong Cong Nguyen",
+    "description": "Meet Phuong Cong Nguyen, Developer from Asia/Vietnam",
+    "tableOfContent": {
+      "display": true,
+      "subItems": false
+    },
+    "avatar": {
+      "display": true
+    },
+    "calendar": {
+      "display": true,
+      "link": "https://cal.com"
+    },
+    "intro": {
+      "display": true,
+      "title": "Introduction",
+      "description": "I am a web developer with a passion for transforming complex challenges into simple, elegant design solutions. My work includes frontend, backend, database programming, devops and website performance optimization."
+    },
+    "work": {
+      "display": true,
+      "title": "Work Experience", 
+      "experiences": [
+        {
+          "company": "Agronexus Capital",
+          "timeframe": "03/2025 - Present",
+          "role": "Full Stack Developer",
+          "achievements": [
+            "Built websites for the main company and subsidiaries (including all processes)",
+            "Optimized performance and SEO for built websites",
+            "Created landing pages for upcoming projects",
+            "Proposed website development strategies for partner companies without websites",
+            "Temporarily managed Mắt Bão mail server and set up emails for employees in absence of admin position",
+            "Currently researching tools to automate company workflows using n8n"
+          ],
+          "images": [
+            {
+              "src": "/images/work/agro/logo.png",
+              "alt": "Agronexus Capital Logo",
+              "width": 16,
+              "height": 9
+            },  
+            {
+              "src": "/images/work/tantai/logo.png", 
+              "alt": "Tan Tai Trading Logo",
+              "width": 16,
+              "height": 9
+            }
+          ]
+        }
+      ]
+    },
+    "studies": {
+      "display": true,
+      "title": "Studies",
+      "institutions": [
+        {
+          "name": "VTC Academy",
+          "description": "Studied full stack web development"
+        }
+      ]
+    },
+    "technical": {
+      "display": true,
+      "title": "Technical skills",
+      "skills": [
+        {
+          "title": "Html, css, js, typescript, tailwindcss, bootstrap, jquery, react, nextjs, shadcn/ui, radix-ui, figma, canva, photoshop, illustrator",
+          "description": "I focus on clean code that's easy to extend and maintain, high performance with optimal page load speeds, smooth and user-friendly experience (UX), responsive design across all devices, and SEO standards to make products more accessible to customers and search engines.",
+          "images": [
+            {
+              "src": "/images/Tech/html.png",
+              "alt": "Skill image",
+              "width": 5,
+              "height": 5
+            },
+            {
+              "src": "/images/Tech/css.png",
+              "alt": "Skill image",
+              "width": 5,
+              "height": 5
+            },
+            {
+              "src": "/images/Tech/js.png",
+              "alt": "Skill image",
+              "width": 5,
+              "height": 5
+            },
+            {
+              "src": "/images/Tech/ts.png",
+              "alt": "Skill image",
+              "width": 5,
+              "height": 5
+            },
+            {
+              "src": "/images/Tech/tailwind.png",
+              "alt": "Skill image",
+              "width": 5,
+              "height": 5
+            },
+            {
+              "src": "/images/Tech/bootstrap.png",
+              "alt": "Skill image",
+              "width": 5,
+              "height": 5
+            },
+            {
+              "src": "/images/Tech/jquery.png",
+              "alt": "Skill image",
+              "width": 5,
+              "height": 5
+            },
+            {
+              "src": "/images/Tech/react.png",
+              "alt": "Skill image",
+              "width": 5,
+              "height": 5
+            },
+            {
+              "src": "/images/Tech/nextjs.png",
+              "alt": "Skill image",
+              "width": 5,
+              "height": 5
+            },
+            {
+              "src": "/images/Tech/shadcn.png",
+              "alt": "Skill image",
+              "width": 5,
+              "height": 5
+            },
+            {
+              "src": "/images/Tech/radix.png",
+              "alt": "Skill image",
+              "width": 5,
+              "height": 5
+            },
+            {
+              "src": "/images/Tech/figma.png",
+              "alt": "Skill image",
+              "width": 5,
+              "height": 5
+            },
+            {
+              "src": "/images/Tech/canva.png",
+              "alt": "Skill image",
+              "width": 5,
+              "height": 5
+            },
+            {
+              "src": "/images/Tech/photoshop.png",
+              "alt": "Skill image",
+              "width": 5,
+              "height": 5
+            },
+            {
+              "src": "/images/Tech/illustrator.png",
+              "alt": "Skill image",
+              "width": 5,
+              "height": 5
+            }
+          ]
+        },
+        {
+          "title": "PHP, Laravel, C#, .NET, Go, Gin, Nodejs, Express",
+          "description": "I always focus on performance, security, and scalability in every system I build. With the ability to design and develop high-performance APIs that are easy to maintain and meet the needs of both the product and end users. During development, I apply SOLID principles, Clean Architecture, and Design Patterns such as Repository, Factory, CQRS to ensure code quality. I also have experience designing RESTful APIs, GraphQL, handling authentication/authorization (JWT, OAuth2), and implementing middleware, background jobs, and queues to serve complex business needs.",
+          "images": [
+            {
+              "src": "/images/Tech/php.png",
+              "alt": "Skill image",
+              "width": 5,
+              "height": 5
+            },
+            {
+              "src": "/images/Tech/laravel.png",
+              "alt": "Skill image",
+              "width": 5,
+              "height": 5
+            },
+            {
+              "src": "/images/Tech/csharp.png",
+              "alt": "Skill image",
+              "width": 5,
+              "height": 5
+            },
+            {
+              "src": "/images/Tech/dotnet.png",
+              "alt": "Skill image",
+              "width": 5,
+              "height": 5
+            },
+            {
+              "src": "/images/Tech/go.png",
+              "alt": "Skill image",
+              "width": 5,
+              "height": 5
+            },
+            {
+              "src": "/images/Tech/nodejs.png",
+              "alt": "Skill image",
+              "width": 5,
+              "height": 5
+            },
+            {
+              "src": "/images/Tech/express.png",
+              "alt": "Skill image",
+              "width": 5,
+              "height": 5
+            }
+          ]
+        },
+        {
+          "title": "Redis, Elasticsearch, MySQL, PostgreSQL, MongoDB, Firebase, AWS",
+          "description": "Ability to design and build efficient database systems, including data normalization, query optimization, indexing, growth planning, sharding, replication, backup, and security. Proficient in managing data with both relational databases (MySQL, PostgreSQL) and NoSQL (MongoDB, Firebase). Effective integration of caching with Redis to improve response times. Experience using Elasticsearch for full-text search and large data processing. Strong skills with realtime systems (Firebase, Redis pub/sub) and ability to deploy infrastructure on AWS (RDS, S3, EC2, CloudWatch) with scalability, monitoring, and cost optimization.",
+          "images": [
+            {
+              "src": "/images/Tech/redis.png",
+              "alt": "Skill image",
+              "width": 5,
+              "height": 5
+            },
+            {
+              "src": "/images/Tech/elasticsearch.png",
+              "alt": "Skill image",
+              "width": 5,
+              "height": 5
+            },
+            {
+              "src": "/images/Tech/mysql.png",
+              "alt": "Skill image",
+              "width": 5,
+              "height": 5
+            },
+            {
+              "src": "/images/Tech/postgresql.png",
+              "alt": "Skill image",
+              "width": 5,
+              "height": 5
+            },
+            {
+              "src": "/images/Tech/mongodb.png",
+              "alt": "Skill image",
+              "width": 5,
+              "height": 5
+            },
+            {
+              "src": "/images/Tech/firebase.png",
+              "alt": "Skill image",
+              "width": 5,
+              "height": 5
+            },
+            {
+              "src": "/images/Tech/aws.png",
+              "alt": "Skill image",
+              "width": 5,
+              "height": 5
+            }
+          ]
+        },
+        {
+          "title": "Docker, Jenkins, CircleCI, N8n, Git, Github, Google OAuth, Zalo OAuth, Telegram Bot API, Momo Payment",
+          "description": "Ability to automate and optimize software development processes through DevOps tools. Proficient with Docker for packaging applications and ensuring consistent deployment across environments. Experience building CI/CD pipelines with Jenkins and CircleCI for automated testing, building, and deployment. Using N8n to integrate and automate workflows between systems (Google Sheets, Email, APIs, etc). Proficient with Git and GitHub for source code management, implementing branching strategies (Git Flow), code review, and effective team collaboration.",
+          "images": [
+            {
+              "src": "/images/Tech/docker.png",
+              "alt": "Skill image",
+              "width": 5,
+              "height": 5
+            },
+            {
+              "src": "/images/Tech/jenkins.png",
+              "alt": "Skill image",
+              "width": 5,
+              "height": 5
+            },
+            {
+              "src": "/images/Tech/circleci.png",
+              "alt": "Skill image",
+              "width": 5,
+              "height": 5
+            },
+            {
+              "src": "/images/Tech/n8n.png",
+              "alt": "Skill image",
+              "width": 5,
+              "height": 5
+            },
+            {
+              "src": "/images/Tech/git.png",
+              "alt": "Skill image",
+              "width": 5,
+              "height": 5
+            },
+            {
+              "src": "/images/Tech/github.png",
+              "alt": "Skill image",
+              "width": 5,
+              "height": 5
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "blog": {
+    "path": "/blog",
+    "label": "Blog",
+    "title": "Writing about programming and technology...",
+    "description": "Read what Phuong Cong Nguyen has been up to recently"
+  },
+  "work": {
+    "path": "/work",
+    "label": "Projects",
+    "title": "Projects – Phuong Cong Nguyen",
+    "description": "Programming and development projects by Phuong Cong Nguyen"
+  },
+  "gallery": {
+    "path": "/gallery",
+    "label": "Gallery",
+    "title": "Photo gallery – Phuong Cong Nguyen",
+    "description": "A photo collection by Phuong Cong Nguyen",
+    "images": [
+      {
+        "src": "/images/gallery/horizontal-1.jpg",
+        "alt": "image",
+        "orientation": "horizontal"
+      },
+      {
+        "src": "/images/gallery/horizontal-2.jpg",
+        "alt": "image",
+        "orientation": "horizontal"
+      },
+      {
+        "src": "/images/gallery/horizontal-3.jpg",
+        "alt": "image",
+        "orientation": "horizontal"
+      },
+      {
+        "src": "/images/gallery/horizontal-4.jpg",
+        "alt": "image",
+        "orientation": "horizontal"
+      },
+      {
+        "src": "/images/gallery/vertical-1.jpg",
+        "alt": "image",
+        "orientation": "vertical"
+      },
+      {
+        "src": "/images/gallery/vertical-2.jpg",
+        "alt": "image",
+        "orientation": "vertical"
+      },
+      {
+        "src": "/images/gallery/vertical-3.jpg",
+        "alt": "image",
+        "orientation": "vertical"
+      },
+      {
+        "src": "/images/gallery/vertical-4.jpg",
+        "alt": "image",
+        "orientation": "vertical"
+      }
+    ]
+  }
+}
